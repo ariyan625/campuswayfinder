@@ -1,4 +1,4 @@
-// ── Core domain types for CampusWayfinder ────────────────────────────────────
+// ── Core domain types for Interactive Campus Hub ─────────────────────────────
 
 export type Role = 'student' | 'faculty' | 'visitor'
 
@@ -28,6 +28,8 @@ export interface CampusNode {
   y: number
   description: string
   hours?: string
+  /** Building photographs, shown in the Explore gallery (e.g. '/campus/photos/block-a-1.jpg'). */
+  photos?: string[]
   tags: string[]
 }
 

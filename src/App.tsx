@@ -1,4 +1,4 @@
-import { HashRouter, Navigate as RouterNavigate, Route, Routes, useLocation } from 'react-router-dom'
+import { BrowserRouter, Navigate as RouterNavigate, Route, Routes, useLocation } from 'react-router-dom'
 import { AppProvider, useApp } from './context/AppContext'
 import { Layout } from './components/Layout'
 import { Welcome } from './pages/Welcome'
@@ -28,10 +28,14 @@ function NavigatePageRoute() {
   return <NavigatePage key={location.search} />
 }
 
+// Deployment base — '/campuswayfinder/' on GitHub Pages, '/' elsewhere. The
+// router needs it as basename so routes resolve under the subpath.
+const BASE = import.meta.env.BASE_URL.replace(/\/+$/, '')
+
 export default function App() {
   return (
     <AppProvider>
-      <HashRouter>
+      <BrowserRouter basename={BASE}>
         <Routes>
           <Route path="/" element={<Welcome />} />
           <Route path="/role" element={<RoleSelect />} />
@@ -56,7 +60,7 @@ export default function App() {
           </Route>
           <Route path="*" element={<RouterNavigate to="/" replace />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </AppProvider>
   )
 }

@@ -46,7 +46,7 @@ export function Layout() {
           <span className="brand__logo">
             <MapPin size={18} />
           </span>
-          <span className="brand__name">CampusWayfinder</span>
+          <span className="brand__name">Interactive Campus Hub</span>
         </Link>
         <div className="app-header__right">
           <button className="sos-btn" aria-label="Emergency" onClick={() => navigate('/emergency')}>
@@ -70,7 +70,7 @@ export function Layout() {
           <span className="brand__logo">
             <MapPin size={18} />
           </span>
-          <span className="brand__name">CampusWayfinder</span>
+          <span className="brand__name">Interactive Campus Hub</span>
         </Link>
         <nav className="sidebar__nav">
           {NAV_ITEMS.map(({ to, label, icon: Icon }) => (

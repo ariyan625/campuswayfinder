@@ -4,10 +4,13 @@ import { motion } from 'framer-motion'
 import { ArrowLeftRight, MapPin, Navigation } from 'lucide-react'
 import { CampusMap } from '../components/CampusMap'
 import { LocationPicker } from '../components/LocationPicker'
+import { PhotoLightbox } from '../components/PhotoLightbox'
 import { RoutePanel } from '../components/RoutePanel'
+import { RouteStrip } from '../components/RouteStrip'
 import { getNode, CAMPUS_NODES } from '../data/campus'
 import { useApp } from '../context/AppContext'
 import { findShortestRoute } from '../lib/navigation'
+import type { CampusNode } from '../types'
 import { Badge, Button, Card } from '../components/ui'
 
 export function Navigate() {
@@ -24,6 +27,7 @@ export function Navigate() {
   const [toId, setToId] = useState(initialTo)
   const [fromPicker, setFromPicker] = useState(false)
   const [toPicker, setToPicker] = useState(false)
+  const [lightbox, setLightbox] = useState<CampusNode | null>(null)
 
   const route = useMemo(() => findShortestRoute(fromId, toId), [fromId, toId])
   const fromNode = getNode(fromId)
@@ -72,6 +76,8 @@ export function Navigate() {
         </Card>
       </motion.div>
 
+      <RouteStrip nodeIds={route?.nodeIds ?? []} onOpen={setLightbox} />
+
       <CampusMap route={route?.nodeIds ?? null} fromId={fromId} toId={toId} height={300} onSelect={setToId} />
 
       {roomParam && (
@@ -104,6 +110,8 @@ export function Navigate() {
 
       <LocationPicker open={fromPicker} onClose={() => setFromPicker(false)} value={fromId} onChange={(id) => { setFromId(id); setFromPicker(false) }} title="Starting location" />
       <LocationPicker open={toPicker} onClose={() => setToPicker(false)} value={toId} onChange={(id) => { setToId(id); setToPicker(false) }} title="Choose destination" />
+
+      {lightbox && <PhotoLightbox node={lightbox} startIndex={0} onClose={() => setLightbox(null)} />}
     </div>
   )
 }

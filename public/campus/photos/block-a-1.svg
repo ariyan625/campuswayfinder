@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dbe4ef"/>
+      <stop offset="1" stop-color="#eef3f8"/>
+    </linearGradient>
+    <linearGradient id="facade" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="rgb(216, 214, 249)"/>
+      <stop offset="1" stop-color="rgb(171, 166, 243)"/>
+    </linearGradient>
+    <filter id="blur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="520" fill="url(#sky)"/>
+  <rect x="0" y="478" width="800" height="42" fill="#d7e2cf"/>
+
+  <rect x="140.14634146341461" y="162" width="519.7073170731708" height="346" rx="10" fill="rgba(30,41,59,0.22)" filter="url(#blur)"/>
+
+  <rect x="154.1" y="150.0" width="491.7" height="320.0" rx="8" fill="url(#facade)"/>
+  <rect x="154.1" y="150.0" width="491.7" height="10" rx="4" fill="rgba(255,255,255,0.55)"/>
+
+  <rect x="168.1" y="162.0" width="54.2" height="65.0" rx="3" fill="#4f46e5" opacity="0.9"/>
+  <rect x="236.4" y="162.0" width="54.2" height="65.0" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="304.6" y="162.0" width="54.2" height="65.0" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="372.9" y="162.0" width="54.2" height="65.0" rx="3" fill="#4f46e5" opacity="0.9"/>
+  <rect x="441.1" y="162.0" width="54.2" height="65.0" rx="3" fill="#4f46e5" opacity="0.9"/>
+  <rect x="509.4" y="162.0" width="54.2" height="65.0" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="577.6" y="162.0" width="54.2" height="65.0" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="168.1" y="239.0" width="54.2" height="65.0" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="236.4" y="239.0" width="54.2" height="65.0" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="304.6" y="239.0" width="54.2" height="65.0" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="372.9" y="239.0" width="54.2" height="65.0" rx="3" fill="#4f46e5" opacity="0.9"/>
+  <rect x="441.1" y="239.0" width="54.2" height="65.0" rx="3" fill="#4f46e5" opacity="0.9"/>
+  <rect x="509.4" y="239.0" width="54.2" height="65.0" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="577.6" y="239.0" width="54.2" height="65.0" rx="3" fill="#4f46e5" opacity="0.9"/>
+  <rect x="168.1" y="316.0" width="54.2" height="65.0" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="236.4" y="316.0" width="54.2" height="65.0" rx="3" fill="#4f46e5" opacity="0.9"/>
+  <rect x="304.6" y="316.0" width="54.2" height="65.0" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="372.9" y="316.0" width="54.2" height="65.0" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="441.1" y="316.0" width="54.2" height="65.0" rx="3" fill="#4f46e5" opacity="0.9"/>
+  <rect x="509.4" y="316.0" width="54.2" height="65.0" rx="3" fill="#4f46e5" opacity="0.9"/>
+  <rect x="577.6" y="316.0" width="54.2" height="65.0" rx="3" fill="#4f46e5" opacity="0.9"/>
+  <rect x="168.1" y="393.0" width="54.2" height="65.0" rx="3" fill="#4f46e5" opacity="0.9"/>
+  <rect x="236.4" y="393.0" width="54.2" height="65.0" rx="3" fill="#4f46e5" opacity="0.9"/>
+  <rect x="304.6" y="393.0" width="54.2" height="65.0" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="372.9" y="393.0" width="54.2" height="65.0" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="441.1" y="393.0" width="54.2" height="65.0" rx="3" fill="#4f46e5" opacity="0.9"/>
+  <rect x="509.4" y="393.0" width="54.2" height="65.0" rx="3" fill="#4f46e5" opacity="0.9"/>
+  <rect x="577.6" y="393.0" width="54.2" height="65.0" rx="3" fill="#8b95a3" opacity="0.75"/>
+
+  <rect x="368.0" y="384.0" width="64.0" height="86.0" rx="4" fill="rgba(30,41,59,0.55)"/>
+  <rect x="373.0" y="390.0" width="54.0" height="74.0" rx="3" fill="rgba(255,255,255,0.28)"/>
+
+  <rect x="190.0" y="448" width="420" height="52" rx="12" fill="rgba(15,23,42,0.62)"/>
+  <text x="400" y="480" text-anchor="middle" font-size="25" font-weight="700" font-family="system-ui, sans-serif" fill="#ffffff">Academic Block A</text>
+
+  <g transform="translate(672 18)">
+    <rect width="110" height="28" rx="14" fill="rgba(15,23,42,0.45)"/>
+    <text x="55" y="19" text-anchor="middle" font-size="13" font-weight="600" font-family="ui-monospace, monospace" fill="#ffffff" opacity="0.85">SAMPLE 1/3</text>
+  </g>
+</svg>

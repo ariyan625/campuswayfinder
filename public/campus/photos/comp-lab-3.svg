@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c4d1e8"/>
+      <stop offset="1" stop-color="#dfe9f6"/>
+    </linearGradient>
+    <linearGradient id="facade" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="rgb(161, 213, 226)"/>
+      <stop offset="1" stop-color="rgb(107, 189, 209)"/>
+    </linearGradient>
+    <filter id="blur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="520" fill="url(#sky)"/>
+  <rect x="0" y="478" width="800" height="42" fill="#d7e2cf"/>
+
+  <rect x="162.8421052631579" y="162" width="474.3157894736842" height="346" rx="10" fill="rgba(30,41,59,0.22)" filter="url(#blur)"/>
+
+  <rect x="176.8" y="150.0" width="446.3" height="320.0" rx="8" fill="url(#facade)"/>
+  <rect x="176.8" y="150.0" width="446.3" height="10" rx="4" fill="rgba(255,255,255,0.55)"/>
+
+  <rect x="190.8" y="162.0" width="40.0" height="90.7" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="244.9" y="162.0" width="40.0" height="90.7" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="298.9" y="162.0" width="40.0" height="90.7" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="353.0" y="162.0" width="40.0" height="90.7" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="407.0" y="162.0" width="40.0" height="90.7" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="461.0" y="162.0" width="40.0" height="90.7" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="515.1" y="162.0" width="40.0" height="90.7" rx="3" fill="#8ea6c4" opacity="0.9"/>
+  <rect x="569.1" y="162.0" width="40.0" height="90.7" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="190.8" y="264.7" width="40.0" height="90.7" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="244.9" y="264.7" width="40.0" height="90.7" rx="3" fill="#8ea6c4" opacity="0.9"/>
+  <rect x="298.9" y="264.7" width="40.0" height="90.7" rx="3" fill="#8ea6c4" opacity="0.9"/>
+  <rect x="353.0" y="264.7" width="40.0" height="90.7" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="407.0" y="264.7" width="40.0" height="90.7" rx="3" fill="#8ea6c4" opacity="0.9"/>
+  <rect x="461.0" y="264.7" width="40.0" height="90.7" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="515.1" y="264.7" width="40.0" height="90.7" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="569.1" y="264.7" width="40.0" height="90.7" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="190.8" y="367.3" width="40.0" height="90.7" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="244.9" y="367.3" width="40.0" height="90.7" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="298.9" y="367.3" width="40.0" height="90.7" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="353.0" y="367.3" width="40.0" height="90.7" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="407.0" y="367.3" width="40.0" height="90.7" rx="3" fill="#8ea6c4" opacity="0.9"/>
+  <rect x="461.0" y="367.3" width="40.0" height="90.7" rx="3" fill="#8ea6c4" opacity="0.9"/>
+  <rect x="515.1" y="367.3" width="40.0" height="90.7" rx="3" fill="#8b95a3" opacity="0.75"/>
+  <rect x="569.1" y="367.3" width="40.0" height="90.7" rx="3" fill="#8ea6c4" opacity="0.9"/>
+
+  <rect x="368.0" y="384.0" width="64.0" height="86.0" rx="4" fill="rgba(30,41,59,0.55)"/>
+  <rect x="373.0" y="390.0" width="54.0" height="74.0" rx="3" fill="rgba(255,255,255,0.28)"/>
+
+  <rect x="190.0" y="448" width="420" height="52" rx="12" fill="rgba(15,23,42,0.62)"/>
+  <text x="400" y="480" text-anchor="middle" font-size="25" font-weight="700" font-family="system-ui, sans-serif" fill="#ffffff">Computer Lab</text>
+
+  <g transform="translate(672 18)">
+    <rect width="110" height="28" rx="14" fill="rgba(15,23,42,0.45)"/>
+    <text x="55" y="19" text-anchor="middle" font-size="13" font-weight="600" font-family="ui-monospace, monospace" fill="#ffffff" opacity="0.85">SAMPLE 3/3</text>
+  </g>
+</svg>

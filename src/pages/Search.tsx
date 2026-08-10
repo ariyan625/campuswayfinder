@@ -1,9 +1,10 @@
 import { useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ArrowRight, Building2, CalendarDays, MapPin, Megaphone, Navigation, Package, Search as SearchIcon } from 'lucide-react'
-import { CAMPUS_NODES, CATEGORY_META, getNode } from '../data/campus'
+import { CAMPUS_NODES, getNode } from '../data/campus'
 import { useApp } from '../context/AppContext'
 import { Badge, Card, EmptyState, Input } from '../components/ui'
+import { BuildingPhoto } from '../components/BuildingPhoto'
 
 export function Search() {
   const navigate = useNavigate()
@@ -76,7 +77,7 @@ export function Search() {
         <SearchSection title="Buildings & Facilities" icon={<Building2 size={16} />}>
           {buildings.map((b) => (
             <Card key={b.id} className="search-result">
-              <span className="search-result__dot" style={{ background: CATEGORY_META[b.category].color }} />
+              <BuildingPhoto node={b} variant="thumb" />
               <div className="search-result__body">
                 <h3>{b.name}</h3>
                 <p>{b.description}</p>

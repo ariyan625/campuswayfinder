@@ -1,8 +1,8 @@
-# CampusWayfinder
+# Interactive Campus Hub
 
-**Explore the Campus. Find Your Way.**
+**Explore. Navigate. Connect.**
 
-A modern, mobile-first campus navigation prototype for students, faculty, parents and visitors.
+A modern, mobile-first interactive campus hub for students, faculty, parents and visitors.
 Scan the QR code at the campus entrance → pick your role → get personalized directions with
 shortest-route navigation, timetable integration and campus services.
 

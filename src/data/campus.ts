@@ -4,6 +4,11 @@ import type { CampusEdge, CampusNode, NodeCategory } from '../types'
 // All placeholder data lives here so it can be swapped for the real college
 // campus (and later an interactive 3D model) without touching any page code.
 
+// Prefix a root-absolute asset path (e.g. '/campus/photos/block-a-1.svg') with
+// the deployment base so assets resolve on GitHub Pages (/campuswayfinder/) and
+// at the root (Vercel/Surge/local) alike.
+const withBase = (path: string): string => `${import.meta.env.BASE_URL.replace(/\/+$/, '')}${path}`
+
 export const CATEGORY_META: Record<NodeCategory, { label: string; color: string }> = {
   gate: { label: 'Gate', color: '#334155' },
   admission: { label: 'Admission', color: '#0d9488' },
@@ -24,7 +29,9 @@ export const CATEGORY_META: Record<NodeCategory, { label: string; color: string 
 export const CAMPUS_NODES: CampusNode[] = [
   {
     id: 'main-gate',
+    photos: ['/campus/photos/main-gate-1.svg', '/campus/photos/main-gate-2.svg', '/campus/photos/main-gate-3.svg'],
     name: 'Main Gate',
+    shortName: 'Main Gate',
     category: 'gate',
     x: 50,
     y: 92,
@@ -33,7 +40,9 @@ export const CAMPUS_NODES: CampusNode[] = [
   },
   {
     id: 'parking',
+    photos: ['/campus/photos/parking-1.svg', '/campus/photos/parking-2.svg', '/campus/photos/parking-3.svg'],
     name: 'Parking',
+    shortName: 'Parking',
     category: 'parking',
     x: 85,
     y: 90,
@@ -42,7 +51,9 @@ export const CAMPUS_NODES: CampusNode[] = [
   },
   {
     id: 'reception',
+    photos: ['/campus/photos/reception-1.svg', '/campus/photos/reception-2.svg', '/campus/photos/reception-3.svg'],
     name: 'Reception',
+    shortName: 'Reception',
     category: 'reception',
     x: 50,
     y: 82,
@@ -52,7 +63,9 @@ export const CAMPUS_NODES: CampusNode[] = [
   },
   {
     id: 'admission',
+    photos: ['/campus/photos/admission-1.svg', '/campus/photos/admission-2.svg', '/campus/photos/admission-3.svg'],
     name: 'Admission Block',
+    shortName: 'Admission',
     category: 'admission',
     x: 28,
     y: 84,
@@ -62,7 +75,9 @@ export const CAMPUS_NODES: CampusNode[] = [
   },
   {
     id: 'admin',
+    photos: ['/campus/photos/admin-1.svg', '/campus/photos/admin-2.svg', '/campus/photos/admin-3.svg'],
     name: 'Administration Office',
+    shortName: 'Admin',
     category: 'admin',
     x: 70,
     y: 82,
@@ -72,7 +87,9 @@ export const CAMPUS_NODES: CampusNode[] = [
   },
   {
     id: 'auditorium',
+    photos: ['/campus/photos/auditorium-1.svg', '/campus/photos/auditorium-2.svg', '/campus/photos/auditorium-3.svg'],
     name: 'Auditorium',
+    shortName: 'Auditorium',
     category: 'auditorium',
     x: 90,
     y: 70,
@@ -81,6 +98,7 @@ export const CAMPUS_NODES: CampusNode[] = [
   },
   {
     id: 'block-a',
+    photos: ['/campus/photos/block-a-1.svg', '/campus/photos/block-a-2.svg', '/campus/photos/block-a-3.svg'],
     name: 'Academic Block A',
     shortName: 'Block A',
     category: 'academic',
@@ -92,6 +110,7 @@ export const CAMPUS_NODES: CampusNode[] = [
   },
   {
     id: 'block-b',
+    photos: ['/campus/photos/block-b-1.svg', '/campus/photos/block-b-2.svg', '/campus/photos/block-b-3.svg'],
     name: 'Academic Block B',
     shortName: 'Block B',
     category: 'academic',
@@ -103,6 +122,7 @@ export const CAMPUS_NODES: CampusNode[] = [
   },
   {
     id: 'block-c',
+    photos: ['/campus/photos/block-c-1.svg', '/campus/photos/block-c-2.svg', '/campus/photos/block-c-3.svg'],
     name: 'Academic Block C',
     shortName: 'Block C',
     category: 'academic',
@@ -114,7 +134,9 @@ export const CAMPUS_NODES: CampusNode[] = [
   },
   {
     id: 'departments',
+    photos: ['/campus/photos/departments-1.svg', '/campus/photos/departments-2.svg', '/campus/photos/departments-3.svg'],
     name: 'Department Offices',
+    shortName: 'Dept Offices',
     category: 'departments',
     x: 12,
     y: 60,
@@ -124,7 +146,9 @@ export const CAMPUS_NODES: CampusNode[] = [
   },
   {
     id: 'cabins',
+    photos: ['/campus/photos/cabins-1.svg', '/campus/photos/cabins-2.svg', '/campus/photos/cabins-3.svg'],
     name: 'Faculty Cabins',
+    shortName: 'Cabins',
     category: 'cabins',
     x: 8,
     y: 30,
@@ -133,7 +157,9 @@ export const CAMPUS_NODES: CampusNode[] = [
   },
   {
     id: 'comp-lab',
+    photos: ['/campus/photos/comp-lab-1.svg', '/campus/photos/comp-lab-2.svg', '/campus/photos/comp-lab-3.svg'],
     name: 'Computer Lab',
+    shortName: 'Comp Lab',
     category: 'lab',
     x: 28,
     y: 34,
@@ -143,7 +169,9 @@ export const CAMPUS_NODES: CampusNode[] = [
   },
   {
     id: 'mech-lab',
+    photos: ['/campus/photos/mech-lab-1.svg', '/campus/photos/mech-lab-2.svg', '/campus/photos/mech-lab-3.svg'],
     name: 'Mechanical Lab',
+    shortName: 'Mech Lab',
     category: 'lab',
     x: 50,
     y: 34,
@@ -153,7 +181,9 @@ export const CAMPUS_NODES: CampusNode[] = [
   },
   {
     id: 'medical',
+    photos: ['/campus/photos/medical-1.svg', '/campus/photos/medical-2.svg', '/campus/photos/medical-3.svg'],
     name: 'Medical Room',
+    shortName: 'Medical',
     category: 'medical',
     x: 70,
     y: 34,
@@ -163,7 +193,9 @@ export const CAMPUS_NODES: CampusNode[] = [
   },
   {
     id: 'library',
+    photos: ['/campus/photos/library-1.svg', '/campus/photos/library-2.svg', '/campus/photos/library-3.svg'],
     name: 'Central Library',
+    shortName: 'Library',
     category: 'library',
     x: 88,
     y: 28,
@@ -173,7 +205,9 @@ export const CAMPUS_NODES: CampusNode[] = [
   },
   {
     id: 'canteen',
+    photos: ['/campus/photos/canteen-1.svg', '/campus/photos/canteen-2.svg', '/campus/photos/canteen-3.svg'],
     name: 'Canteen',
+    shortName: 'Canteen',
     category: 'canteen',
     x: 50,
     y: 16,
@@ -183,7 +217,9 @@ export const CAMPUS_NODES: CampusNode[] = [
   },
   {
     id: 'boys-hostel',
+    photos: ['/campus/photos/boys-hostel-1.svg', '/campus/photos/boys-hostel-2.svg', '/campus/photos/boys-hostel-3.svg'],
     name: 'Boys Hostel',
+    shortName: 'Boys Hostel',
     category: 'hostel',
     x: 22,
     y: 12,
@@ -193,7 +229,9 @@ export const CAMPUS_NODES: CampusNode[] = [
   },
   {
     id: 'girls-hostel',
+    photos: ['/campus/photos/girls-hostel-1.svg', '/campus/photos/girls-hostel-2.svg', '/campus/photos/girls-hostel-3.svg'],
     name: 'Girls Hostel',
+    shortName: 'Girls Hostel',
     category: 'hostel',
     x: 62,
     y: 12,
@@ -202,6 +240,12 @@ export const CAMPUS_NODES: CampusNode[] = [
     tags: ['hostel', 'girls', 'stay', 'mess'],
   },
 ]
+
+// Resolve photo paths against the deployment base (works on the GitHub Pages
+// /campuswayfinder/ subpath and at the root alike).
+for (const node of CAMPUS_NODES) {
+  if (node.photos) node.photos = node.photos.map(withBase)
+}
 
 export const nodeById = new Map<string, CampusNode>(CAMPUS_NODES.map((n) => [n.id, n]))
 
@@ -252,6 +296,48 @@ export const VISITOR_DESTINATIONS: { id: string; label: string; icon: string }[]
   { id: 'canteen', label: 'Canteen', icon: 'canteen' },
   { id: 'medical', label: 'Medical / Emergency Point', icon: 'medical' },
 ]
+
+// ── Building footprints (aerial scene) ──────────────────────────────────────
+// Roof sizes used by the aerial campus scene and by the interactive map hit
+// areas. Per category so buildings look natural from above.
+
+export const BUILDING_FOOTPRINTS: Record<string, { w: number; h: number }> = {
+  gate: { w: 6.5, h: 4.6 },
+  reception: { w: 7.6, h: 6.2 },
+  admission: { w: 9.6, h: 6.8 },
+  admin: { w: 10.2, h: 7.8 },
+  academic: { w: 12.6, h: 8.2 },
+  lab: { w: 10.6, h: 7.6 },
+  library: { w: 11.2, h: 9.2 },
+  hostel: { w: 16.8, h: 7 },
+  canteen: { w: 8.6, h: 6.8 },
+  auditorium: { w: 13.8, h: 8.8 },
+  medical: { w: 7.2, h: 6.2 },
+  parking: { w: 12.2, h: 7.6 },
+  departments: { w: 8.6, h: 6.6 },
+  cabins: { w: 6.8, h: 9.8 },
+}
+
+export const footprintFor = (node: CampusNode): { w: number; h: number } =>
+  BUILDING_FOOTPRINTS[node.category] ?? { w: 9, h: 6.5 }
+
+// ── Campus imagery (primary visual layer) ───────────────────────────────────
+// The base visual layer of the campus map is an image: public/campus/campus-aerial.svg
+// (a sample "satellite photo" placeholder — see public/campus/README.md).
+//
+// To swap in the real college later:
+//   1. Drop the satellite/aerial photo into /public/campus/  (e.g. campus-aerial.jpg)
+//   2. Set aerialImageUrl to its path (e.g. '/campus/campus-aerial.jpg') — or keep
+//      the same filename so no code change is needed.
+//   3. Align the building pins with the photo by editing each node's x/y below.
+// <CampusMap> renders the image as the base layer; building data, routing,
+// timetable and services are separate interactive layers and keep working
+// unchanged. Set aerialImageUrl to null to fall back to the generated scene.
+// If you edit the node x/y coordinates below, regenerate the placeholder with
+// `node scripts/generate-campus-aerial.mjs` (the real photo needs no regeneration).
+export const CAMPUS_IMAGERY: { aerialImageUrl: string | null } = {
+  aerialImageUrl: withBase('/campus/campus-aerial.svg'),
+}
 
 export const EMERGENCY_NODES: { id: string; label: string; icon: string }[] = [
   { id: 'medical', label: 'Medical Room', icon: 'medical' },

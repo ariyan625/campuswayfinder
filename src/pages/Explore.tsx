@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight, Clock, Info, MapPin, Navigation, Search } from 'lucide-react'
 import { CampusMap } from '../components/CampusMap'
+import { BuildingGallery } from '../components/BuildingGallery'
 import { getNode, CAMPUS_NODES, CATEGORY_META } from '../data/campus'
 import { useApp } from '../context/AppContext'
 import { findShortestRoute, formatDistance, formatMinutes } from '../lib/navigation'
@@ -74,6 +75,7 @@ export function Explore() {
       {selected && (
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }}>
           <Card className="building-card">
+            <BuildingGallery key={selected.id} node={selected} />
             <div className="building-card__head">
               <span className="building-card__icon" style={{ background: CATEGORY_META[selected.category].color }}>
                 <MapPin size={20} />
